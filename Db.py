@@ -65,7 +65,6 @@ class Database:
             return False
 
     def update_single(self, table: str, data: list, id: int):
-        print(data)
         placeholders = ""
         values = []
         data_length = len(data)
@@ -86,9 +85,6 @@ class Database:
 
         sql_prepared = "UPDATE `%s` SET %s WHERE `id`=%s" % (
             table, placeholders, ':id')
-
-        print(sql_prepared)
-        print(values)
 
         try:
             self.cursor.execute(sql_prepared, values)
