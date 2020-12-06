@@ -5,3 +5,4 @@ scraps_local
 public/
 static/bootstrap
 static/css
+templates/*.html
