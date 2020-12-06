@@ -8,11 +8,11 @@ def user_register(user_data: list):
 
     if is_registered:
         flash("email address is already registered, login instead", "danger")
-        return render_template("register.jinja.html")
+        return 'REGISTER VIEW'
     else:
         user.register_user()
         flash('successful scraps registration', 'info')
-        return render_template("register-success.jinja.html", user=user)
+        return 'REGISTER SUCCESS VIEW'
 
 
 def user_login(data: list):
@@ -21,7 +21,7 @@ def user_login(data: list):
 
     if not user.is_logged_in:
         flash("incorrect login, try again", "danger")
-        return render_template("login.jinja.html")
+        return 'LOGIN VIEW'
     else:
         session.clear()
         user_dict = {
@@ -34,7 +34,7 @@ def user_login(data: list):
         session["user"] = user_dict
         flash('successfully logged in as {user}'.format(
             user=session['user']['email']), "info")
-        return redirect(url_for("crawl"))
+        return redirect(url_for("NEXT ACTION"))
 
 
 def user_logout():
