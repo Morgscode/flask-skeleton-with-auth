@@ -1,5 +1,5 @@
 import html
-from scraps.Db import Database
+from ROOT_DIR_NAME.Db import Database
 
 
 class User():

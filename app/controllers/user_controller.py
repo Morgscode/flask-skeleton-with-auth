@@ -1,4 +1,4 @@
-from scraps.app.models.User import User
+from ROOT_DIR_NAME.app.models.User import User
 from flask import request, render_template, session, redirect, url_for, flash
 
 
