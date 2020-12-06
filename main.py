@@ -1,5 +1,5 @@
 import datetime
-import ROOT_DIR_NAM.app.controllers.user_controller as user_controller
+import ROOT_DIR_NAME.app.controllers.user_controller as user_controller
 
 from flask import Flask, request, redirect, url_for, render_template, session, flash
 
