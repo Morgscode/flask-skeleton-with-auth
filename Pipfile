@@ -5,6 +5,8 @@ name = "pypi"
 
 [packages]
 flask = "*"
+bcrypt = "*"
+requests = "*"
 
 [dev-packages]
 autopep8 = "*"
